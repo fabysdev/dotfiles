@@ -1,5 +1,12 @@
 # Fabys Dotfiles
 
+## Devpod
+
+```bash
+devpod context set-options -o EXIT_AFTER_TIMEOUT=false
+devpod context set-options -o TELEMETRY=false
+```
+
 ## OpenVSCode
 
 ```bash
