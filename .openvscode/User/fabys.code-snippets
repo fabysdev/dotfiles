@@ -1,0 +1,96 @@
+{
+  "cjlo": {
+    "scope": "javascript,typescript,javascriptreact,typescriptreact",
+    "prefix": "cjlo",
+    "body": [
+      "console.log(`${1:var}:`, JSON.stringify(${1:var}, null, 2)); // nocheckin"
+    ],
+    "description": "Log var output to console with json stringify"
+  },
+  "cvlo": {
+    "scope": "javascript,typescript,javascriptreact,typescriptreact",
+    "prefix": "cvlo",
+    "body": [
+      "console.log(`${1:var}:`, ${1:var}); // nocheckin"
+    ],
+    "description": "Log var output to console"
+  },
+  "cslog": {
+    "scope": "javascript,typescript,javascriptreact,typescriptreact",
+    "prefix": "cslo",
+    "body": [
+      "console.log(`${1:str}`); // nocheckin"
+    ],
+    "description": "Log string to console"
+  },
+  "cjplo": {
+    "scope": "javascript,typescript,javascriptreact,typescriptreact",
+    "prefix": "cjplo",
+    "body": [
+      "console.log(`${1:var}:`, JSON.parse(JSON.stringify(${1:var}))); // nocheckin"
+    ],
+    "description": "Log var output to console with json stringify followed by json parse"
+  },
+  "iflog": {
+    "scope": "javascript,typescript,typescriptreact,react,javascriptreact",
+    "prefix": "iflog",
+    "body": [
+      "/* #if-dev */",
+      "console.log(\"$1\");",
+      "/* ### */",
+      "$2"
+    ],
+    "description": "Log output to console"
+  },
+  "reactfunc": {
+    "scope": "javascript,typescript,typescriptreact,react,javascriptreact",
+    "prefix": "reactfunc",
+    "body": [
+      "import React from \"react\";",
+      "import tw from \"twin.macro\";",
+      "import {useTranslation} from \"react-i18next\";",
+      "",
+      "// -----------------------------------------------------------------------------------------------------------",
+      "interface ${1:name}Props {}",
+      "",
+      "const ${1:name}: React.FC<${1:name}Props> = (/*{}*/) => {",
+      "const {t} = useTranslation();",
+      "",
+      "// [ render ]",
+      "return <div>${1:name}</div>;",
+      "};",
+      "",
+      "export default ${1:name};"
+    ],
+    "description": "React Functional Component"
+  },
+  "solidfunc": {
+    "scope": "javascript,typescript,typescriptreact,react,javascriptreact",
+    "prefix": "solidfunc",
+    "body": [
+      "import {type Component} from \"solid-js\";",
+      "import {useI18n} from \"~/i18n/i18n\";",
+      "",
+      "// -----------------------------------------------------------------------------------------------------------",
+      "interface ${1:name}Props {}",
+      "",
+      "const ${1:name}: Component<${1:name}Props> = (props) => {",
+      "const [t] = useI18n();",
+      "",
+      "// [ render ]",
+      "return <div>${1:name}</div>;",
+      "};",
+      "",
+      "export default ${1:name};"
+    ],
+    "description": "Solid Component"
+  },
+  "infolog": {
+    "scope": "rust",
+    "prefix": "infolog",
+    "body": [
+      "info!(\"{:?}\", ${1}); // nocheckin"
+    ],
+    "description": "info! output"
+  },
+}

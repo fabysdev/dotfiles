@@ -1,0 +1,49 @@
+{
+	"[html]": {
+		"editor.defaultFormatter": "esbenp.prettier-vscode"
+	},
+	"[javascript]": {
+		"editor.defaultFormatter": "esbenp.prettier-vscode"
+	},
+	"[json]": {
+		"editor.defaultFormatter": "esbenp.prettier-vscode"
+	},
+	"[jsonc]": {
+		"editor.defaultFormatter": "esbenp.prettier-vscode"
+	},
+	"[typescript]": {
+		"editor.defaultFormatter": "esbenp.prettier-vscode"
+	},
+	"[typescriptreact]": {
+		"editor.defaultFormatter": "esbenp.prettier-vscode"
+	},
+	"editor.fontFamily": "FiraCode NF, Consolas, 'Courier New', monospace, 'Noto Color Emoji'",
+	"editor.fontLigatures": true,
+	"editor.fontSize": 15,
+	"editor.formatOnPaste": true,
+	"editor.formatOnSave": true,
+	"editor.lineHeight": 1.4,
+	"editor.semanticHighlighting.enabled": true,
+	"editor.tabSize": 2,
+	"errorLens.excludeBySource": [
+		"eslint(prettier/prettier)"
+	],
+	"files.autoSave": "off",
+	"files.exclude": {
+		"cache": true
+	},
+	"git.autofetch": true,
+	"git.confirmSync": false,
+	"http.proxyStrictSSL": false,
+	"javascript.inlayHints.parameterTypes.enabled": true,
+	"material-icon-theme.folders.associations": {
+		"deployment": "cluster"
+	},
+	"prettier.printWidth": 190,
+	"telemetry.telemetryLevel": "off",
+	"terminal.integrated.copyOnSelection": true,
+	"terminal.integrated.scrollback": 1000,
+	"workbench.colorTheme": "Default Dark Modern",
+	"workbench.iconTheme": "material-icon-theme",
+	"workbench.startupEditor": "none"
+}
