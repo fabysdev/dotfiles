@@ -43,7 +43,7 @@
 	"telemetry.telemetryLevel": "off",
 	"terminal.integrated.copyOnSelection": true,
 	"terminal.integrated.scrollback": 1000,
-	"workbench.colorTheme": "Default Dark Modern",
+	"workbench.colorTheme": "GitHub Dark Dimmed",
 	"workbench.iconTheme": "material-icon-theme",
 	"workbench.startupEditor": "none"
 }

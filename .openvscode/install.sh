@@ -12,6 +12,7 @@ ln -s $PWD/.openvscode/Machine $HOME/.openvscode-server/data/Machine
 # install extensions
 $HOME/.openvscode-server/bin/openvscode-server --install-extension $PWD/.openvscode/fabys-settings-loader-0.0.3.vsix
 
+$HOME/.openvscode-server/bin/openvscode-server --install-extension GitHub.github-vscode-theme
 $HOME/.openvscode-server/bin/openvscode-server --install-extension PKief.material-icon-theme
 $HOME/.openvscode-server/bin/openvscode-server --install-extension usernamehw.errorlens
 $HOME/.openvscode-server/bin/openvscode-server --install-extension esbenp.prettier-vscode
