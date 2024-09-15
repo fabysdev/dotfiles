@@ -14,3 +14,17 @@ devpod up <URL> --ide openvscode --gpg-agent-forwarding --dotfiles https://githu
 
 # Run command: "FabysSettingsLoader: Load Settings"
 ```
+
+
+## NeoVim
+
+```bash
+devpod up <URL> --ide none --gpg-agent-forwarding --dotfiles https://github.com/fabysdev/dotfiles # --recreate
+
+devpod ssh <name>
+
+tmux -u
+# install tmux plugins (C-b)+(I) 
+~/.tmux/plugins/tpm/bin/install_plugins
+
+```

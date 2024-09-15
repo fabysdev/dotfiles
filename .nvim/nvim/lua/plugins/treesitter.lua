@@ -1,0 +1,35 @@
+local devcontainer_customizations = require "lib.devcontainer_customizations"
+
+return {
+  'nvim-treesitter/nvim-treesitter',
+  build = ':TSUpdate',
+  main = 'nvim-treesitter.configs',
+  opts = {
+    -- ensure_installed = {
+    --   'lua',
+    --   'javascript',
+    --   'typescript',
+    --   'vimdoc',
+    --   'vim',
+    --   'regex',
+    --   'sql',
+    --   'dockerfile',
+    --   'toml',
+    --   'json',
+    --   'go',
+    --   'gitignore',
+    --   'yaml',
+    --   'make',
+    --   'markdown',
+    --   'markdown_inline',
+    --   'bash',
+    --   'tsx',
+    --   'css',
+    --   'html',
+    -- },
+    ensure_installed = devcontainer_customizations.treesitter_configs,
+    auto_install = true,
+    highlight = { enable = true },
+    indent = { enable = true },
+  },
+}
