@@ -18,7 +18,7 @@ curl -Lo /tmp/nvim.appimage "https://github.com/neovim/neovim/releases/download/
 chmod u+x /tmp/nvim.appimage
 /tmp/nvim.appimage
 
-if [ $? -ne 0 ]; then 
+if [ $? -ne 0 ]; then
   mkdir -p /tmp/nvim_extracted
   cd /tmp/nvim_extracted
   /tmp/nvim.appimage --appimage-extract

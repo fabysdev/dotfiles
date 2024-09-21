@@ -1,4 +1,4 @@
-local devcontainer_customizations = require "lib.devcontainer_customizations"
+local devcontainer_customizations = require 'lib.devcontainer_customizations'
 
 return {
   'neovim/nvim-lspconfig',
@@ -14,7 +14,7 @@ return {
             done_icon = '✓',
           },
         },
-      }
+      },
     },
     'hrsh7th/cmp-nvim-lsp',
   },

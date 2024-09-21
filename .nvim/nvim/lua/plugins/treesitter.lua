@@ -1,4 +1,4 @@
-local devcontainer_customizations = require "lib.devcontainer_customizations"
+local devcontainer_customizations = require 'lib.devcontainer_customizations'
 
 return {
   'nvim-treesitter/nvim-treesitter',

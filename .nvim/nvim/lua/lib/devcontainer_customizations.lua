@@ -1,6 +1,6 @@
 local function file_exists(path)
   local stat = vim.loop.fs_stat(path)
-  return stat and stat.type == "file"
+  return stat and stat.type == 'file'
 end
 
 local function to_set(list)
@@ -13,13 +13,13 @@ local function to_set(list)
   return set
 end
 
-local current_file_dir = vim.fn.expand("%:p:h")
-local devcontainer_json_path = current_file_dir .. "/" .. ".devcontainer/devcontainer.json"
+local current_file_dir = vim.fn.expand '%:p:h'
+local devcontainer_json_path = current_file_dir .. '/' .. '.devcontainer/devcontainer.json'
 
 local devcontainer_customizations = {
   lsb_servers = {},
   lsb_formatters = {},
-  treesitter_configs = {}
+  treesitter_configs = {},
 }
 
 if file_exists(devcontainer_json_path) then
@@ -27,18 +27,18 @@ if file_exists(devcontainer_json_path) then
 
   local cleaned_json = {}
   for _, line in ipairs(json_data) do
-    line = line:gsub("//.*$", "")
-    line = line:gsub("/%*.*%*/", "")
-    line = line:match("^%s*(.-)%s*$")
-    if line ~= "" then
+    line = line:gsub('//.*$', '')
+    line = line:gsub('/%*.*%*/', '')
+    line = line:match '^%s*(.-)%s*$'
+    if line ~= '' then
       table.insert(cleaned_json, line)
     end
   end
 
-  local json_string = table.concat(cleaned_json, "\n")
+  local json_string = table.concat(cleaned_json, '\n')
   local success, parsed = pcall(vim.json.decode, json_string)
   if not success then
-    print("failed to parse devcontainer.json", json_string)
+    print('failed to parse devcontainer.json', json_string)
     return devcontainer_customizations
   end
 
@@ -61,4 +61,4 @@ if file_exists(devcontainer_json_path) then
   end
 end
 
-return devcontainer_customizations;
+return devcontainer_customizations

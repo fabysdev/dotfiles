@@ -1,4 +1,4 @@
-local devcontainer_customizations = require "lib.devcontainer_customizations"
+local devcontainer_customizations = require 'lib.devcontainer_customizations'
 
 return {
   'nvimtools/none-ls.nvim',
@@ -8,7 +8,7 @@ return {
   },
   config = function()
     local null_ls = require 'null-ls'
-    local formatting = null_ls.builtins.formatting   -- to setup formatters
+    local formatting = null_ls.builtins.formatting -- to setup formatters
     local diagnostics = null_ls.builtins.diagnostics -- to setup linters
 
     -- Formatters & linters for mason to install
