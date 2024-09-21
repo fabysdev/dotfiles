@@ -1,0 +1,25 @@
+{
+  "name": "dotfiles",
+
+  "image": "mcr.microsoft.com/devcontainers/typescript-node:22",
+
+  "customizations": {
+    "vscode": {
+      "extensions": ["esbenp.prettier-vscode", "sumneko.lua"],
+      "settings": {
+        "terminal.integrated.defaultProfile.linux": "zsh",
+        "terminal.integrated.profiles.linux": {
+          "zsh": {
+            "path": "zsh",
+            "icon": "terminal-bash"
+          }
+        }
+      }
+    },
+    "neovim": {
+      "lsb_servers": ["lua_ls", "jsonls"],
+      "lsb_formatters": ["prettier", "stylua", "shfmt"],
+      "treesitter_configs": ["json", "lua", "vim", "vimdoc", "bash", "markdown", "markdown_inline"]
+    }
+  }
+}
