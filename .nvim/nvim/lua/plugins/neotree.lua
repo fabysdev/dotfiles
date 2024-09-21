@@ -198,6 +198,8 @@ return {
             '.git',
             '.python-version',
             '.venv',
+            'node_modules',
+            '.pnpm-store',
           },
           hide_by_pattern = { -- uses glob style patterns
             --"*.meta",
