@@ -1,7 +1,7 @@
 return {
   'goolord/alpha-nvim',
   dependencies = {
-    'nvim-tree/nvim-web-devicons',
+    'DaikyXendo/nvim-material-icon',
   },
 
   config = function()

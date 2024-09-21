@@ -3,6 +3,7 @@ return {
   branch = 'v3.x',
   dependencies = {
     'nvim-lua/plenary.nvim',
+    'DaikyXendo/nvim-material-icon',
     'MunifTanjim/nui.nvim',
     '3rd/image.nvim',
     {

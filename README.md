@@ -1,5 +1,29 @@
 # Fabys Dotfiles
 
+## Terminal
+
+```bash
+sudo apt-get install keychain
+
+vim ~/.bashrc
+```
+
+```
+ssh_pid=$(pidof ssh-agent)
+if [ "$ssh_pid" = "" ]; then
+  ssh_env="$(ssh-agent -s)"
+  echo "$ssh_env" | head -n 2 | tee ~/.ssh_agent_env > /dev/null
+fi
+if [ -f ~/.ssh_agent_env ]; then
+  eval "$(cat ~/.ssh_agent_env)"
+fi
+
+ssh-add $HOME/.ssh/id_rsa
+
+/usr/bin/keychain -q --nogui $HOME/.ssh/id_rsa
+source $HOME/.keychain/$(hostname)-sh
+```
+
 ## Devpod
 
 ```bash
