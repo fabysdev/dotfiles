@@ -41,4 +41,7 @@ return {
       require('colorizer').setup()
     end,
   },
+  {
+    'rest-nvim/rest.nvim',
+  },
 }
