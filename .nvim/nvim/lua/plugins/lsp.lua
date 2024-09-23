@@ -1,5 +1,19 @@
 local devcontainer_customizations = require 'lib.devcontainer_customizations'
 
+local function organize_imports(client, bufnr)
+  local params = vim.lsp.util.make_range_params(nil, vim.lsp.util._get_offset_encoding(bufnr))
+  params.context = { only = { 'source.organizeImports' } }
+
+  local resp = client.request_sync('textDocument/codeAction', params, 1500, bufnr)
+  for _, r in pairs(resp and resp.result or {}) do
+    if r.edit then
+      vim.lsp.util.apply_workspace_edit(r.edit, vim.lsp.util._get_offset_encoding(bufnr))
+    else
+      vim.lsp.buf.execute_command(r.command)
+    end
+  end
+end
+
 return {
   'neovim/nvim-lspconfig',
   dependencies = {
@@ -112,7 +126,17 @@ return {
     -- Enable the following language servers
     local server_configs = {
       rust_analyzer = {},
-      gopls = {},
+      gopls = {
+        on_attach = function(client, bufnr)
+          vim.api.nvim_create_autocmd('BufWritePre', {
+            buffer = bufnr,
+            callback = function()
+              organize_imports(client, bufnr)
+              vim.lsp.buf.format { async = false }
+            end,
+          })
+        end,
+      },
       ts_ls = {},
       html = { filetypes = { 'html' } },
       cssls = {},
