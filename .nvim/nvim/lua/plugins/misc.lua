@@ -43,5 +43,12 @@ return {
   },
   {
     'rest-nvim/rest.nvim',
+    config = function()
+      vim.fn.encode_uri_component = function(str)
+        return str:gsub('([^%w%+%.-_~])', function(c)
+          return string.format('%%%02X', string.byte(c))
+        end)
+      end
+    end,
   },
 }
