@@ -31,6 +31,7 @@ return {
       },
     },
     'hrsh7th/cmp-nvim-lsp',
+    'ray-x/lsp_signature.nvim',
   },
   config = function()
     vim.api.nvim_create_autocmd('LspAttach', {
@@ -80,6 +81,25 @@ return {
 
         -- Hover Doc
         map('K', vim.lsp.buf.hover, 'Hover Doc')
+
+        -- Signatures
+        map('<C-k>', function()
+          require('lsp_signature').toggle_float_win()
+        end, 'Toggle Signature', { 'n', 'i' })
+
+        map('<leader>k', function()
+          vim.lsp.buf.signature_help()
+        end, 'Toggle Singature Help')
+
+        require('lsp_signature').on_attach({
+          bind = true,
+          hint_enable = false,
+          padding = ' ',
+          doc_lines = 0,
+          handler_opts = {
+            border = 'none',
+          },
+        }, event.buf)
 
         -- The following two autocommands are used to highlight references of the
         -- word under your cursor when your cursor rests there for a little while.
