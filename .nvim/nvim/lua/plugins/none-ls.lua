@@ -28,6 +28,7 @@ return {
       stylua = formatting.stylua,
       shfmt = formatting.shfmt.with { args = { '-i', '2' } },
       gofmt = formatting.gofmt,
+      sql_formatter = formatting.sql_formatter,
     }
 
     local sources = {

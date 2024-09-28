@@ -2,7 +2,7 @@
 set -ea
 
 # Dependencies
-sudo apt update && sudo apt install ripgrep fd-find
+sudo apt update && sudo apt install -y ripgrep fd-find python3.11-venv
 
 # Lazygit
 LAZYGIT_VERSION=$(curl -s "https://api.github.com/repos/jesseduffield/lazygit/releases/latest" | grep -Po '"tag_name": "v\K[^"]*')
