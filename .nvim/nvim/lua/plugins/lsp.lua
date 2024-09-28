@@ -94,11 +94,9 @@ return {
         require('lsp_signature').on_attach({
           bind = true,
           hint_enable = false,
+          max_width = 120,
           padding = ' ',
           doc_lines = 0,
-          handler_opts = {
-            border = 'none',
-          },
         }, event.buf)
 
         -- The following two autocommands are used to highlight references of the
@@ -197,6 +195,10 @@ return {
         servers[server] = cfg
       end
     end
+
+    vim.lsp.handlers['textDocument/hover'] = vim.lsp.with(vim.lsp.handlers.hover, {
+      border = 'rounded',
+    })
 
     -- Ensure the servers and tools above are installed
     require('mason').setup()

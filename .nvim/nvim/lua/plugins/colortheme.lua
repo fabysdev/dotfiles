@@ -4,5 +4,8 @@ return {
   priority = 1000, -- make sure to load this before all the other start plugins
   config = function()
     vim.cmd 'colorscheme github_dark_dimmed'
+
+    vim.api.nvim_set_hl(0, 'FloatBorder', { bg = '#1E232A', fg = '#444c56' })
+    vim.api.nvim_set_hl(0, 'LspSignatureActiveParameter', { fg = '#6CB6FF' })
   end,
 }
