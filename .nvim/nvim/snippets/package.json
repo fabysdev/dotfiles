@@ -1,0 +1,23 @@
+{
+  "name": "fabys-snippets",
+  "contributes": {
+    "snippets": [
+      {
+        "language": [
+          "javascript",
+          "typescript",
+          "javascriptreact",
+          "typescriptreact",
+          "react"
+        ],
+        "path": "./javascript.json"
+      },
+      {
+        "language": [
+          "rust"
+        ],
+        "path": "./rust.json"
+      }
+    ]
+  }
+}

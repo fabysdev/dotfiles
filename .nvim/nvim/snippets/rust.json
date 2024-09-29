@@ -1,0 +1,10 @@
+{
+  "infolog": {
+    "scope": "rust",
+    "prefix": "infolog",
+    "body": [
+      "info!(\"{:?}\", ${1}); // nocheckin"
+    ],
+    "description": "info! output"
+  }
+}

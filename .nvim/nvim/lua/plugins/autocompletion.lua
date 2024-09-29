@@ -32,6 +32,8 @@ return { -- Autocompletion
     'hrsh7th/cmp-path',
   },
   config = function()
+    require('luasnip.loaders.from_vscode').lazy_load { paths = '~/.config/nvim/snippets' }
+
     -- See `:help cmp`
     local cmp = require 'cmp'
     local luasnip = require 'luasnip'
