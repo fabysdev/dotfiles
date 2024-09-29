@@ -9,3 +9,4 @@ fi
 
 bash $PWD/.nvim/install.sh
 bash $PWD/.tmux/install.sh
+bash $PWD/.wezterm/install.sh
