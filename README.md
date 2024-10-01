@@ -7,8 +7,6 @@ https://github.com/ryanoasis/nerd-fonts/releases/download/v3.2.1/FiraCode.zip
 ## Terminal
 
 ```bash
-sudo apt-get install keychain
-
 vim ~/.bashrc
 ```
 
@@ -23,9 +21,6 @@ if [ -f ~/.ssh_agent_env ]; then
 fi
 
 ssh-add $HOME/.ssh/id_rsa
-
-/usr/bin/keychain -q --nogui $HOME/.ssh/id_rsa
-source $HOME/.keychain/$(hostname)-sh
 ```
 
 ## Devpod
