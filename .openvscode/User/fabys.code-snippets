@@ -93,4 +93,22 @@
     ],
     "description": "info! output"
   },
+  "nextfunc": {
+    "scope": "javascript,typescript,typescriptreact,react,javascriptreact",
+    "prefix": "nextfunc",
+    "body": [
+      "import {useTranslations} from \"next-intl\";",
+      "",
+      "// -----------------------------------------------------------------------------------------------------------",
+      "// interface ${1:name}Props {}",
+      "",
+      "export default function ${1:name}(/*{}: ${1:name}Props*/) {",
+      "const t = useTranslations();",
+      "",
+      "// [ render ]",
+      "return <div>${1:name}</div>;",
+      "};"
+    ],
+    "description": "NextJs Functional Component"
+  }
 }

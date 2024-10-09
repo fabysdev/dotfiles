@@ -77,5 +77,24 @@
       "export default ${1:name};"
     ],
     "description": "Solid Component"
+  },
+  "nextfunc": {
+    "prefix": "nextfunc",
+    "body": [
+      "\"use client\";",
+      "",
+      "import {useTranslations} from \"next-intl\";",
+      "",
+      "// -----------------------------------------------------------------------------------------------------------",
+      "// interface ${1:name}Props {}",
+      "",
+      "export default function ${1:name}(/*{}: ${1:name}Props*/) {",
+      "const t = useTranslations();",
+      "",
+      "// [ render ]",
+      "return <div>${1:name}</div>;",
+      "};"
+    ],
+    "description": "NextJs Functional Component"
   }
 }
