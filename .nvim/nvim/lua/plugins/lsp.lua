@@ -168,6 +168,7 @@ return {
       sqlls = {},
       jsonls = {},
       yamlls = {},
+      eslint = {},
 
       lua_ls = {
         settings = {
