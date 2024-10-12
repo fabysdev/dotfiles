@@ -42,6 +42,7 @@ return {
     end,
   },
   {
+    -- HTTP client
     'rest-nvim/rest.nvim',
     config = function()
       vim.fn.encode_uri_component = function(str)
@@ -50,5 +51,9 @@ return {
         end)
       end
     end,
+  },
+  {
+    -- Context
+    'nvim-treesitter/nvim-treesitter-context',
   },
 }
